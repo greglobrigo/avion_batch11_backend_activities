@@ -4,10 +4,10 @@ num1 = 10
 arr1 = [1, 3, 5, 7, 9] 
 def checkNumInArr(num1, arr1)  
      
-        if arr.include? num
-            puts "Yes the number #{num} is in the array"
+        if arr1.include? num1
+            puts "Yes the number #{num1} is in the array"
         else
-            puts "No the number #{num} is not in the array"
+            puts "No the number #{num1} is not in the array"
         end
 end
 # checkNumInArr(num1, arr1)  
