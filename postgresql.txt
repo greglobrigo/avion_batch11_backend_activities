@@ -1,8 +1,10 @@
 sudo service postgresql start - start server
-sudo -u postgresql psql - access db
+sudo -u postgres psql - access db
 \dt - show listed databases
 \c - switch databases
 SELECT current_database(); - retrieve current database you're in
+pg_ctl start - start server
+psql postgres - ??
 
 create table lessons(
 id integer primary key,

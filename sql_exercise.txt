@@ -1,0 +1,49 @@
+1. Create a table named 'Students'. Fields: name: character varying(50), course: character varying(50), age: numeric.
+2. Insert 5 records to the Students table. You are in charge of the data.
+3. Sort them by descending age.
+4. Get their average age.
+5. Get the sum of their age.
+6. Display millenials (age 25 to 32 yrs old).
+7. Update the course of millenials to "Millenialogy".
+8. Delete students whose age are greater than 30.
+9. Display the names of the students
+10. Display the names and courses of students whose age are lower than 20
+
+
+
+create table Students_activity(
+id integer primary key,
+name character varying(50),
+age numeric
+);
+
+ALTER TABLE Students_activity
+ADD COLUMN course character varying(50);
+
+update Students_activity set course = 'Millenialogy' where id>0; 
+
+INSERT INTO Students_activity (id, name, age)                                                                                                                               
+VALUES (1, 'Greg', 26);  
+
+INSERT INTO Students_activity (id, name, age)                                                                                                                               
+VALUES (2, 'Ryan', 24);  
+
+INSERT INTO Students_activity (id, name, age)                                                                                                                               
+VALUES (3, 'Nick', 32);  
+
+INSERT INTO Students_activity (id, name, age)                                                                                                                               
+VALUES (4, 'May', 16);  
+
+INSERT INTO Students_activity (id, name, age)                                                                                                                               
+VALUES (5, 'Diane', 28);  
+
+select age from Students_activity order by age desc;
+select avg(age) from Students_activity;
+select age from Students_activity where age>25 and age<32;
+
+DELETE FROM Students_activity
+WHERE age > 30;
+
+select name from Students_activity;
+
+select * from Students_activity where age > 20;
