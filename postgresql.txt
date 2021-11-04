@@ -1,7 +1,9 @@
 sudo service postgresql start - start server
 sudo -u postgres psql - access db
-\dt - show listed databases
+\dt - show listed tables
+\l - display all databases
 \c - switch databases
+\dt+ "table_name" - display values of table
 SELECT current_database(); - retrieve current database you're in
 pg_ctl start - start server
 psql postgres - ??

@@ -1,0 +1,44 @@
+INSERT INTO lessons (id, name, description, price, created_at, updated_at, front_end, back_end)                                                                                                                               
+VALUES (3, 'Javascript', 'Javascript is front end and backend programming language used by developers.', 100.00, current_timestamp, current_timestamp, true, true);  
+
+INSERT INTO lessons (id, name, description, price, created_at, updated_at, front_end, back_end)                                                                                                                               
+VALUES (5, 'Golang', 'Golang is a statically typed, complied programming language.', 499.00, current_timestamp, current_timestamp, false, true);  
+
+create table instructors(
+id integer primary key,
+first_name character varying(30) not null,
+last_name character varying(30) not null,
+lesson_id integer not null,
+created_at timestamp without time zone not null,
+updated_at timestamp without time zone not null
+);
+
+INSERT INTO instructors (id, first_name, last_name, lesson_id, created_at, updated_at)
+VALUES (1, 'Adrian', 'Co', 1, current_timestamp, current_timestamp);
+
+INSERT INTO instructors (id, first_name, last_name, lesson_id, created_at, updated_at)
+VALUES (2, 'Analyn', 'Cajocson', 1, current_timestamp, current_timestamp);
+
+INSERT INTO instructors (id, first_name, last_name, lesson_id, created_at, updated_at)
+VALUES (3, 'Pau', 'Riosa', 3, current_timestamp, current_timestamp);
+
+INSERT INTO instructors (id, first_name, last_name, lesson_id, created_at, updated_at)
+VALUES (4, 'Maurus', 'Vitor', 3, current_timestamp, current_timestamp);
+
+INSERT INTO instructors (id, first_name, last_name, lesson_id, created_at, updated_at)
+VALUES (5, 'John', 'Young', 6, current_timestamp, current_timestamp);
+
+SELECT l.name, i.first_name, i.last_name FROM lessons l FULL JOIN instructors i ON i.lesson_id = l.id;
+
+select l.name, i.first_name, i.last_name from lessons l left join instructors i on i.lesson_id = l.id;
+
+create table classrooms(
+id integer primary key,
+student_id integer not null,
+section character varying(10) not null
+);
+
+INSERT INTO classrooms (id, student_id, section)
+VALUES (1, 1, 'A'), (2, 2, 'A'), (3, 3, 'B'), (4, 4, 'c'), (5, 5, 'B'), (6, 6, 'A'), (7, 7, 'C'), (8, 8, 'B'), (9, 9, 'B'), (10, 10, 'C');
+
+SELECT * FROM classrooms FULL JOIN students  ON classrooms.id=students.id;
