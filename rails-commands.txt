@@ -1,2 +1,2 @@
 rails s - start rails (npm start)
-rails project_name - create rails app (npx create-react-app)
+rails new project_name - create rails app (npx create-react-app)
