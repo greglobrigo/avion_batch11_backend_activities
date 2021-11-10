@@ -7,6 +7,9 @@ rails c - start rails console
 object.save - save object
 reload! - reload rails
 object.pluck(:name) - get array of values
-object.find_by(:name) - find object by name
-object.find_by(:name).destroy - destroy object
-object.find_by(:name).update(:name => 'new name') - update object
+object.find_by(name: "Jason") - find object by name
+object.find_by(name: "Bryan").destroy - destroy object
+object.find_by(name: "Bryan").update(:name => 'new name') - update object
+object.update_all(name: 'new name') - update all objects
+object.where(name: 'some name') - find all objects
+object.where.not(name: 'some name') - find all objects with the not method
