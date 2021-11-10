@@ -1,2 +1,12 @@
+rails - open rails commands
 rails s - start rails (npm start)
 rails new project_name - create rails app (npx create-react-app)
+rails d model 'article' - destroy file
+rails g model 'article' - generate file
+rails c - start rails console
+object.save - save object
+reload! - reload rails
+object.pluck(:name) - get array of values
+object.find_by(:name) - find object by name
+object.find_by(:name).destroy - destroy object
+object.find_by(:name).update(:name => 'new name') - update object
