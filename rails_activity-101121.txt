@@ -1,0 +1,21 @@
+# 1. Create 5 articles.
+# 2. Display the count.
+# 3. Display all the names.
+# 4. Display all the ids and names. 
+# 5. Change the name of the first article into "Edited".
+# 6. Change the body of the last article into "Bench".
+# 7. Delete all articles having "Bench" as the body. 
+# 8. Change all articles with name as "Edited" into "Edited part 2"
+# 9. Delete all articles that does not have the name "Edited part 2"
+# 10. Display the count
+
+# Article.create(id: 5, name: "5", body: "body_of_5")  
+# Article.count
+# Article.pluck(:name)
+# Article.pluck(:id, :name)
+# Article.first.update(:name =>'Edited')
+# Article.last.update(:body => 'Bench')
+# Article.where(body: 'Bench').delete_all
+# Article.where(name: 'Edited').update_all(name: 'Edited part 2')
+# Article.where.not(name: 'Edited part 2').destroy_all
+# Article.count

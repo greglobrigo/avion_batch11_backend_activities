@@ -3,9 +3,11 @@ rails s - start rails (npm start)
 rails new project_name - create rails app (npx create-react-app)
 rails d model 'article' - destroy file
 rails g model 'article' - generate file
+rails g controller 'articles'  - generate controller
 rails c - start rails console
 object.save - save object
 reload! - reload rails
+object.create(id: 1, name: "some_name") - create object
 object.pluck(:name) - get array of values
 object.find_by(name: "Jason") - find object by name
 object.find_by(name: "Bryan").destroy - destroy object
@@ -13,3 +15,11 @@ object.find_by(name: "Bryan").update(:name => 'new name') - update object
 object.update_all(name: 'new name') - update all objects
 object.where(name: 'some name') - find all objects
 object.where.not(name: 'some name') - find all objects with the not method
+object.where("name = 'some name' or body = 'some value'") - find all objects with the where method
+
+steps in creating new Object
+1. rails g model Message name:string body:text - generate model
+2. rails db:migrate
+3. start creating (e.g.) object.create(id: 1, name: "some_name")
+
+rails g model Car brand:string model:string year:integer
