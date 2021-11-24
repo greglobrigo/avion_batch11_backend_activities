@@ -16,6 +16,21 @@ object.update_all(name: 'new name') - update all objects
 object.where(name: 'some name') - find all objects
 object.where.not(name: 'some name') - find all objects with the not method
 object.where("name = 'some name' or body = 'some value'") - find all objects with the where method
+$ rspec spec --format documentation - run rspec
+
+# Article.create(id: 5, name: "5", body: "body_of_5")  
+# Article.count
+# Article.pluck(:name)
+# Article.pluck(:id, :name)
+# Article.first.update(:name =>'Edited')
+# Article.last.update(:body => 'Bench')
+# Article.where(body: 'Bench').delete_all
+# Article.where(name: 'Edited').update_all(name: 'Edited part 2')
+# Article.where.not(name: 'Edited part 2').destroy_all
+# Article.count
+# Article.errors.full_messages - check for errors
+
+bundle exec rspec spec --format documentation - run rspec
 
 steps in creating new Object
 1. rails g model Message name:string body:text - generate model
