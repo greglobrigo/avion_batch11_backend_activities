@@ -7,7 +7,7 @@ sudo -u postgres psql - access db
 SELECT current_database(); - retrieve current database you're in
 SELECT version(); - display version of server
 pg_ctl start - start server
-psql postgres - ??
+sudo service postgresql restart - restart server
 
 create table lessons(
 id integer primary key,
